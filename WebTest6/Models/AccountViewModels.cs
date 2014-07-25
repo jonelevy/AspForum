@@ -18,6 +18,8 @@ namespace WebTest6.Models
 
     public class ManageUserViewModel
     {
+
+
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Current password")]

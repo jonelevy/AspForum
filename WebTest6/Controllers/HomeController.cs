@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WebTest6.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -24,6 +25,11 @@ namespace WebTest6.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        public ActionResult Users()
+        {
+            ViewBag.Message = "See all registered users!";
             return View();
         }
     }

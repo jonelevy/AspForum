@@ -50,11 +50,11 @@ namespace WebTest6
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "3668128220-1jhf2vvoqlrtrcuhreu5gav1fr78pn9i.apps.googleusercontent.com",
+                ClientSecret = "4Y1Bk3zKMllHbwHRjAHKxpPI"
+            });
         }
     }
 }
