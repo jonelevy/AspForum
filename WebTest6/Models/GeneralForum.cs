@@ -6,10 +6,20 @@ using System.Web;
 
 namespace WebTest6.Models
 {
+
+
     public class GeneralForum
     {
+        public enum messageCount
+        {
+            count = 0
+        };
+
         public string ID { get; set; }
-        public Message theMessage { get; set; }
+        public int number { get; set; }
+        public string Text { get; set; }
+        public string User { get; set; }
+        public DateTime? Time_Posted { get; set; }
     }
     public class ForumDBContext : DbContext
     {
