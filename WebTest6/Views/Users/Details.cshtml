@@ -1,0 +1,41 @@
+﻿@model WebTest6.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoCommentsPosted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoCommentsPosted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.joined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.joined)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
