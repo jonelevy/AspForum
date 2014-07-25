@@ -96,6 +96,7 @@ namespace WebTest6.Controllers
                 newUser.Name = model.Email;
                 newUser.Password = model.Password;
                 newUser.joined = DateTime.Now;
+                newUser.ID = user.Id;
                 db.Users.Add(newUser);
                 db.SaveChanges();
                 newUser.NoCommentsPosted = 0;
@@ -421,6 +422,8 @@ namespace WebTest6.Controllers
                     newUser.Name = model.Email;
                    // newUser.Password = model.Password;
                     newUser.joined = DateTime.Now;
+                    newUser.ID = user.Id;
+                    newUser.NoCommentsPosted=0;
                     db.Users.Add(newUser);
                     db.SaveChanges();
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);

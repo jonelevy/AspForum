@@ -46,9 +46,9 @@ namespace WebTest6
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "626956907411845",
+               appSecret: "4e9fa79d5bc47e9c5bab0ec495074c48");
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
