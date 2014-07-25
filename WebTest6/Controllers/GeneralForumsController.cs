@@ -12,6 +12,7 @@ namespace WebTest6.Controllers
 {
     public class GeneralForumsController : Controller
     {
+
         private ForumDBContext db = new ForumDBContext();
 
         // GET: GeneralForums
@@ -50,6 +51,10 @@ namespace WebTest6.Controllers
         {
             if (ModelState.IsValid)
             {
+
+                generalForum.Time_Posted = DateTime.Now;
+                generalForum.User = System.Web.HttpContext.Current.User.Identity.Name;
+                generalForum.ID = new Random().Next(0, 10000).ToString();
                 db.Messages.Add(generalForum);
                 db.SaveChanges();
                 return RedirectToAction("Index");
